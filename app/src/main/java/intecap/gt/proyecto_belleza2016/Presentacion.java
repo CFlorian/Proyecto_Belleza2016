@@ -17,13 +17,15 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
-public class Presentacion extends AppCompatActivity  {
+
+public class Presentacion extends AppCompatActivity implements View.OnClickListener {
     private CollapsingToolbarLayout collapsingToolbarLayout = null;
-    ArrayList<SeccionCortes> cortes = new ArrayList<SeccionCortes>();
+    //ArrayList<SeccionCortes> cortes = new ArrayList<SeccionCortes>();
     //private ListView listView;
 
-    //private CardView damas, caballeros, ninos, ninas;
+    private CardView damas, caballeros, ninos, ninas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +36,8 @@ public class Presentacion extends AppCompatActivity  {
         dynamicToolbarColor();
         toolbarTextAppernce();
         //mostrarAdaptador();
-        //selectOption();
+        selectOption();
 
-        ListView lv = (ListView) findViewById(R.id.listview);
-        AdapterCortes adapterCortes = new AdapterCortes(this, cortes);
-        lv.setAdapter(adapterCortes);
 
     }
     /*
@@ -47,16 +46,10 @@ public class Presentacion extends AppCompatActivity  {
             AdapterCortes adapterCortes = new AdapterCortes(this, cortes);
             lv.setAdapter(adapterCortes);
         }
+  */
 
 
-            private void selectOption() {
-                damas = (CardView) findViewById(R.id.damas);
-                caballeros = (CardView) findViewById(R.id.caballero);
 
-                caballeros.setOnClickListener(this);
-                damas.setOnClickListener(this);
-            }
-        */
     private void toolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -64,19 +57,18 @@ public class Presentacion extends AppCompatActivity  {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbarLayout.setTitle("Cortes y peinados");
+        collapsingToolbarLayout.setTitle(getResources().getString(R.string.belleza));
     }
 
 
     private void dynamicToolbarColor() {
-
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
                 R.drawable.intecap);
         Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
             @Override
             public void onGenerated(Palette palette) {
-                collapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(R.attr.colorAccent));
-                collapsingToolbarLayout.setStatusBarScrimColor(palette.getMutedColor(R.attr.colorControlHighlight));
+                collapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(R.attr.colorPrimary));
+                collapsingToolbarLayout.setStatusBarScrimColor(palette.getMutedColor(R.attr.colorPrimaryDark));
             }
         });
     }
@@ -90,7 +82,6 @@ public class Presentacion extends AppCompatActivity  {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -101,5 +92,20 @@ public class Presentacion extends AppCompatActivity  {
     }
 
 
+    private void selectOption() {
+        damas = (CardView) findViewById(R.id.damas);
+        caballeros = (CardView) findViewById(R.id.caballeros);
 
+        caballeros.setOnClickListener(this);
+        damas.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent caballero = new Intent(this, DragNDropTiposActivity.class);
+        startActivity(caballero);
+
+        Intent dama = new Intent(this, DragNDropTiposActivity.class);
+        startActivity(dama);
+    }
 }

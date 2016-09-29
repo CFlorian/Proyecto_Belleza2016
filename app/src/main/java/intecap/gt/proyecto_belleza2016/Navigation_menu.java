@@ -1,5 +1,6 @@
 package intecap.gt.proyecto_belleza2016;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
 public class Navigation_menu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -83,6 +86,8 @@ public class Navigation_menu extends AppCompatActivity
         if (id == R.id.nav_perfil) {
 
         } else if (id == R.id.nav_info) {
+            Intent intento = new Intent(Navigation_menu.this, DragNDropTiposActivity.class);
+            startActivity(intento);
 
         } else if (id == R.id.nav_creditos) {
 

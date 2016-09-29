@@ -81,9 +81,9 @@ public class Navigation_menu extends AppCompatActivity
          else if (id == R.id.nav_creditos)
             clase = DragNDrop.class;
          else if (id == R.id.nav_herramientas)
-            clase = null;
+            clase = Video.class;
 
-        System.err.println(clase.toString());
+
 
         if(clase != null){
             Intent i = new Intent(getBaseContext(), clase);

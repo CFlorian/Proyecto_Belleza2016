@@ -17,7 +17,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import intecap.gt.proyecto_belleza2016.Presentacion;
+import intecap.gt.proyecto_belleza2016.Navigation_menu;
 import intecap.gt.proyecto_belleza2016.R;
 import intecap.gt.proyecto_belleza2016.utilidades.Chance;
 
@@ -127,7 +127,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener,
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 
-                                Intent menu = new Intent(Registro.this, Presentacion.class);
+                                Intent menu = new Intent(Registro.this, Navigation_menu.class);
                                 startActivity(menu);
                             }
                         }).show();

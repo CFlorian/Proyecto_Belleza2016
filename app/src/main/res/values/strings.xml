@@ -9,7 +9,6 @@
     <string name="title_activity_navigation_menu">Cortes y Peinados</string>
     <string name="belleza">Cortes y peinados</string>
 
-    <string name="app_name">ProyectoBelleza</string>
     <string name="mi_progreso">Mi progreso</string>
     <string name="autoevaluaciones">Autoevaluaciones</string>
     <string name="presentacion">Presentación</string>
@@ -29,8 +28,8 @@
     <string name="nacimiento">Nacimiento:</string>
     <string name="guion">-</string>
     <string name="carn">Carné:</string>
-    <string name="primer_nombre">Primer nombre</string>
-    <string name="primer_apellido">Primer apellido</string>
+    <string name="primer_nombre">Nombre</string>
+    <string name="primer_apellido">Apellido</string>
     <string name="nombre_usuario">Nombre usuario</string>
     <string name="entrar">Entrar</string>
     <string name="olvidaste_tus_datos"><u>¿Olvidaste tus datos?</u></string>

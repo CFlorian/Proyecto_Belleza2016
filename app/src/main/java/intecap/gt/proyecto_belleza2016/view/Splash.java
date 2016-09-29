@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.Menu;
 import android.view.Window;
 
 import intecap.gt.proyecto_belleza2016.R;
@@ -42,7 +41,7 @@ public class Splash extends Activity{
                         startActivity(registro);
 
                     }else {
-                        Intent login = new Intent(Splash.this, Menu.class);
+                        Intent login = new Intent(Splash.this, Login.class);
                         startActivity(login);
                     }
 

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_ultimo"
+    tools:context=".view.Login">
+
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:background="@drawable/logo_intecap_hd"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:paddingTop="@dimen/_50sdp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/new_user"/>
+        <EditText
+            android:layout_width="@dimen/_200sdp"
+            android:hint="@string/nombre_usuario"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:inputType="textPersonName"
+            android:id="@+id/etLoginUsuario"
+            android:textSize="@dimen/_25sdp"
+            android:gravity="clip_horizontal"
+            android:paddingBottom="@dimen/_20sdp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/new_password"/>
+
+        <EditText
+            android:layout_width="@dimen/_200sdp"
+            android:hint="@string/contrase_a"
+            android:id="@+id/etLoginContraseña"
+            android:textColor="#FFFFFF"
+            android:inputType="textPassword"
+            android:paddingBottom="@dimen/_20sdp"
+            android:layout_gravity="clip_horizontal"
+            android:textSize="@dimen/_25sdp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/_15sdp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:text="@string/entrar"
+            android:id="@+id/bLogin"
+            android:textSize="@dimen/_30sdp"
+            android:background="@drawable/boton"/>
+
+        <TextView
+            android:paddingTop="@dimen/_15sdp"
+            android:textSize="@dimen/_17sdp"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:layout_width="wrap_content"
+            android:id="@+id/tvLoginDatosOlvidados"
+            android:layout_height="wrap_content"
+            android:text="@string/olvidaste_tus_datos"/>
+    </LinearLayout>
+
+</LinearLayout>

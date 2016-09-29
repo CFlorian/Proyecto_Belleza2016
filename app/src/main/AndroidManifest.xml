@@ -13,8 +13,7 @@
         <activity
             android:name=".Navigation_menu"
             android:label="@string/title_activity_navigation_menu"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity android:name=".Presentacion" />
         <activity android:name=".view.Registro" />
         <activity android:name=".view.DragNDropTiposActivity" />
@@ -27,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.Login"></activity>
     </application>
 
 </manifest>

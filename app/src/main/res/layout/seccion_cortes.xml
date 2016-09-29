@@ -25,13 +25,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Corte para damas"
-            android:layout_gravity="bottom"
-            android:background="#8c000000"
-            android:textColor="#ffe3e3e3"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:layout_gravity="bottom"/>
 
     </android.support.v7.widget.CardView>
-
-
 </LinearLayout>

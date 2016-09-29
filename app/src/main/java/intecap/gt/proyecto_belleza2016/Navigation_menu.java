@@ -2,9 +2,6 @@ package intecap.gt.proyecto_belleza2016;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import intecap.gt.proyecto_belleza2016.view.DragNDrop;
 import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
 public class Navigation_menu extends AppCompatActivity
@@ -73,24 +71,24 @@ public class Navigation_menu extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Class<?> clase = null;
 
-        if (id == R.id.nav_perfil) {
-            Intent i = new Intent(Navigation_menu.this, Presentacion.class);
+        if (id == R.id.nav_perfil)
+            clase = Presentacion.class;
+         else if (id == R.id.nav_info)
+            clase = DragNDropTiposActivity.class;
+         else if (id == R.id.nav_creditos)
+            clase = DragNDrop.class;
+         else if (id == R.id.nav_herramientas)
+            clase = null;
+
+        System.err.println(clase.toString());
+
+        if(clase != null){
+            Intent i = new Intent(getBaseContext(), clase);
             startActivity(i);
-
-        } else if (id == R.id.nav_info) {
-            Intent intento = new Intent(Navigation_menu.this, DragNDropTiposActivity.class);
-            startActivity(intento);
-
-        } else if (id == R.id.nav_creditos) {
-
-        } else if (id == R.id.nav_herramientas) {
-
         }
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

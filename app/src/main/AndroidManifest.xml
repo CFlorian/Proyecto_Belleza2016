@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="intecap.gt.proyecto_belleza2016">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,11 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Presentacion"/>
-        <activity android:name=".Registro"/>
-        <activity android:name=".view.DragNDropTiposActivity"/>
-        <activity android:name=".view.DragNDrop"/>
-        <activity android:name=".Video"/>
+        <activity android:name=".Presentacion" />
+        <activity android:name=".view.Registro" />
+        <activity android:name=".view.DragNDropTiposActivity" />
+        <activity android:name=".view.DragNDrop" />
+        <activity android:name=".Video" />
+        <activity android:name=".view.Splash"></activity>
     </application>
 
 </manifest>

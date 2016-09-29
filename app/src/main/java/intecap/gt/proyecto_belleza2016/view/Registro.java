@@ -1,8 +1,25 @@
-package intecap.gt.proyecto_belleza2016;
+package intecap.gt.proyecto_belleza2016.view;
 
-
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.Editable;
+import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import intecap.gt.proyecto_belleza2016.Presentacion;
+import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.utilidades.Chance;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
@@ -212,8 +229,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener,
                 case 5: dpi3.requestFocus(); break;
             }
         }
-    };
 
+    };
     @Override
     protected void onPause() {
         super.onPause();

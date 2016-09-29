@@ -29,7 +29,7 @@
                     android:layout_height="@dimen/_50sdp"
                     android:src="@drawable/new_user"/>
                 <EditText
-                    android:layout_width="@dimen/_220sdp"
+                    android:layout_width="@dimen/_100sdp"
                     android:textColor="#FFFFFF"
                     android:layout_gravity="center"
                     android:layout_height="wrap_content"
@@ -38,23 +38,10 @@
                     android:id="@+id/etPrimerNombre"
                     android:hint="@string/primer_nombre"/>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:paddingLeft="@dimen/_30sdp"
-                android:paddingRight="@dimen/_30sdp"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/_30sdp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="@dimen/_50sdp"
-                    android:layout_height="@dimen/_50sdp"
-                    android:src="@drawable/new_user"/>
                 <EditText
-                    android:layout_width="@dimen/_220sdp"
+                    android:layout_width="@dimen/_100sdp"
                     android:textColor="#FFFFFF"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/_18sdp"
                     android:inputType="textPersonName"

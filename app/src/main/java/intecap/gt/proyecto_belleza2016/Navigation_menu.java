@@ -8,12 +8,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import intecap.gt.proyecto_belleza2016.adapter.PeinadosAdapter;
+import java.util.ArrayList;
+import java.util.List;
+
+import intecap.gt.proyecto_belleza2016.adapter.PresentacionAdapter;
+import intecap.gt.proyecto_belleza2016.adapter.PresentacionMenu;
 import intecap.gt.proyecto_belleza2016.view.DragNDrop;
 import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
@@ -23,8 +28,7 @@ public class Navigation_menu extends AppCompatActivity
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
     private GridLayoutManager glm;
-    private PeinadosAdapter pa;
-    private PeinadosAdapter co;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +46,37 @@ public class Navigation_menu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //presentacionMenu();
+        presentacionMenu();
     }
 
+    private void presentacionMenu() {
+        List<PresentacionMenu> items = new ArrayList<>();//img / nombre
+        items.add(new PresentacionMenu(R.mipmap.cortedama, ""));
+        items.add(new PresentacionMenu(R.mipmap.caballero, ""));
+        items.add(new PresentacionMenu(R.mipmap.cortepunk, ""));
+        items.add(new PresentacionMenu(R.mipmap.cortedama, ""));
+
+
+       /*
+       *  List<Peinados> item = new ArrayList<>();//img / nombre
+        item.add(new Peinados(R.mipmap.cortedama, ""));
+        item.add(new Peinados(R.mipmap.cortedama, ""));
+        item.add(new Peinados(R.mipmap.cortedama, ""));
+        item.add(new Peinados(R.mipmap.cortedama, ""));
+        */
+
+        glm = new GridLayoutManager(this, 2);
+        recycler = (RecyclerView) findViewById(R.id.reciclador);
+        recycler.setHasFixedSize(true);
+
+        lManager = new LinearLayoutManager(this);
+        recycler.setLayoutManager(glm);
+
+        adapter = new PresentacionAdapter(items);
+        recycler.setAdapter(adapter);
+
+        //adapter = new PresentacionAdapter(item);
+    }
 
 
     @Override

@@ -1,16 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
-    <android.support.v7.widget.CardView
-        android:id="@+id/cvCortes"
+    android:layout_height="wrap_content">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        card_view:cardCornerRadius="6dp"
-        card_view:cardElevation="10dp"
-        card_view:cardUseCompatPadding="true" >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<android.support.v7.widget.CardView android:id="@+id/cvCortes"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="10dp"
+    card_view:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
 
         <ImageView
             android:id="@+id/ivCortes"
@@ -28,4 +31,5 @@
             android:layout_gravity="bottom"/>
 
     </android.support.v7.widget.CardView>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -282,7 +282,7 @@
                 android:textSize="@dimen/_25sdp"
                 android:text="@string/registrarme"
                 android:textColor="#fff"
-                android:background="@drawable/button_style"
+                android:background="@drawable/ic_menu_gallery"
                 android:id="@+id/bRegistrar"
                 android:layout_gravity="center">
             </Button>

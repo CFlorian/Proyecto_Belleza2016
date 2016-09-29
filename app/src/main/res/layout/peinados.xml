@@ -1,0 +1,35 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <android.support.v7.widget.CardView android:id="@+id/cvCortes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="10dp"
+            card_view:cardUseCompatPadding="true"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:background="@color/black">
+
+            <ImageView
+                android:id="@+id/ivPeinados"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/cortedama"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/tvNombrePeinados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Corte para damas"
+                android:layout_gravity="bottom"/>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

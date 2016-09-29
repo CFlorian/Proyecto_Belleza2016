@@ -1,7 +1,6 @@
 package intecap.gt.proyecto_belleza2016.view;
 
 import android.content.ClipData;
-import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Point;
@@ -15,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import intecap.gt.proyecto_belleza2016.Presentacion;
 import intecap.gt.proyecto_belleza2016.R;
 
 public class DragNDrop extends AppCompatActivity {
@@ -130,9 +128,9 @@ public class DragNDrop extends AppCompatActivity {
         if((count + 1) < IMGS.length){
             count ++;
             onInit();
-        }else{
+        }else{/*
             Intent i = new Intent(getBaseContext(), Presentacion.class);
-            startActivity(i);
+            startActivity(i);*/
         }
 
     }

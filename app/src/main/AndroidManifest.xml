@@ -18,9 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Presentacion"/>
-        <activity android:name=".view.DragNDropTiposActivity"/>
-        <activity android:name=".view.DragNDrop"/>
+        <activity android:name=".Presentacion" />
+        <activity android:name=".view.DragNDropTiposActivity" />
+        <activity android:name=".view.DragNDrop" />
+        <activity android:name=".Registro"></activity>
     </application>
 
 </manifest>

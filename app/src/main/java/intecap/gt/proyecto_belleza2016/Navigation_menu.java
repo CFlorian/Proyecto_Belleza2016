@@ -51,15 +51,15 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
     private void presentacionMenu() {
         List<PresentacionMenu> items = new ArrayList<>();//img / nombre
         items.add(new PresentacionMenu(R.mipmap.cortedama, "Damas"));
-        items.add(new PresentacionMenu(R.mipmap.caballero, "Caballero"));
-        items.add(new PresentacionMenu(R.mipmap.corte_nino, "Niños"));
-        items.add(new PresentacionMenu(R.mipmap.nina, "Niñas"));
+        items.add(new PresentacionMenu(R.mipmap.cortedama, "Caballero"));
+        items.add(new PresentacionMenu(R.mipmap.cortedama, "Niños"));
+        items.add(new PresentacionMenu(R.mipmap.cortedama, "Niñas"));
 
         List<PresentacionMenu> item = new ArrayList<>();
-        item.add(new PresentacionMenu(R.mipmap.peinado_damas, "Damas"));
-        item.add(new PresentacionMenu(R.mipmap.peinado_caballeros, "Caballeros"));
-        item.add(new PresentacionMenu(R.mipmap.peinado_ninos, "Niños"));
-        item.add(new PresentacionMenu(R.mipmap.peinado_ninas, "Niñas"));
+        item.add(new PresentacionMenu(R.mipmap.cortedama, "Damas"));
+        item.add(new PresentacionMenu(R.mipmap.cortedama, "Caballeros"));
+        item.add(new PresentacionMenu(R.mipmap.cortedama, "Niños"));
+        item.add(new PresentacionMenu(R.mipmap.cortedama, "Niñas"));
 
 
        /*

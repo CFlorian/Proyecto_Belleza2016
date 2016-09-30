@@ -20,7 +20,7 @@ public class CortesAdapter extends RecyclerView.Adapter<CortesAdapter.CortesAdap
 
 
 
-    public static class CortesAdapterViewHolder extends RecyclerView.ViewHolder{
+    public static class CortesAdapterViewHolder extends RecyclerView.ViewHolder {
         public ImageView imagen;
         public TextView nombre;
 
@@ -29,6 +29,8 @@ public class CortesAdapter extends RecyclerView.Adapter<CortesAdapter.CortesAdap
             imagen = (ImageView) itemView.findViewById(R.id.ivCortes);
             nombre = (TextView) itemView.findViewById(R.id.tvNombreCortes);
         }
+
+
     }
     public CortesAdapter(List<PresentacionMenu> items){
         this.items = items;

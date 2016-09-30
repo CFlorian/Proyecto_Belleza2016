@@ -22,11 +22,10 @@ import intecap.gt.proyecto_belleza2016.adapter.PresentacionMenu;
 import intecap.gt.proyecto_belleza2016.view.DragNDrop;
 import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
-public class Navigation_menu extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Navigation_menu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private RecyclerView recycler, recycler2;
     private RecyclerView.Adapter adapter, adapter2;
-    private RecyclerView.LayoutManager lManager;
+    private RecyclerView.LayoutManager lManager, lManager2;
     private GridLayoutManager glm, glm2;
 
 
@@ -51,16 +50,16 @@ public class Navigation_menu extends AppCompatActivity
 
     private void presentacionMenu() {
         List<PresentacionMenu> items = new ArrayList<>();//img / nombre
-        items.add(new PresentacionMenu(R.mipmap.cortedama, ""));
-        items.add(new PresentacionMenu(R.mipmap.caballero, ""));
-        items.add(new PresentacionMenu(R.mipmap.cortepunk, ""));
-        items.add(new PresentacionMenu(R.mipmap.cortedama, ""));
+        items.add(new PresentacionMenu(R.mipmap.cortedama, "Damas"));
+        items.add(new PresentacionMenu(R.mipmap.caballero, "Caballero"));
+        items.add(new PresentacionMenu(R.mipmap.corte_nino, "Niños"));
+        items.add(new PresentacionMenu(R.mipmap.nina, "Niñas"));
 
         List<PresentacionMenu> item = new ArrayList<>();
-        item.add(new PresentacionMenu(R.mipmap.cortedama, ""));
-        item.add(new PresentacionMenu(R.mipmap.cortedama, ""));
-        item.add(new PresentacionMenu(R.mipmap.cortedama, ""));
-        item.add(new PresentacionMenu(R.mipmap.cortedama, ""));
+        item.add(new PresentacionMenu(R.mipmap.peinado_damas, "Damas"));
+        item.add(new PresentacionMenu(R.mipmap.peinado_caballeros, "Caballeros"));
+        item.add(new PresentacionMenu(R.mipmap.peinado_ninos, "Niños"));
+        item.add(new PresentacionMenu(R.mipmap.peinado_ninas, "Niñas"));
 
 
        /*
@@ -81,9 +80,14 @@ public class Navigation_menu extends AppCompatActivity
         adapter = new PresentacionAdapter(items);
         recycler.setAdapter(adapter);
 
+
+
         glm2 = new GridLayoutManager(this, 2);
         recycler2 = (RecyclerView) findViewById(R.id.reciclador2);
         recycler2.setHasFixedSize(true);
+
+        lManager2 = new LinearLayoutManager(this);
+        recycler2.setLayoutManager(glm2);
 
         adapter2 = new PresentacionAdapter(item);
         recycler2.setAdapter(adapter2);
@@ -133,16 +137,15 @@ public class Navigation_menu extends AppCompatActivity
 
         if (id == R.id.nav_perfil)
             clase = null;
-         else if (id == R.id.nav_info)
+        else if (id == R.id.nav_info)
             clase = DragNDropTiposActivity.class;
-         else if (id == R.id.nav_creditos)
+        else if (id == R.id.nav_creditos)
             clase = DragNDrop.class;
-         else if (id == R.id.nav_herramientas)
+        else if (id == R.id.nav_herramientas)
             clase = Video.class;
 
 
-
-        if(clase != null){
+        if (clase != null) {
             Intent i = new Intent(getBaseContext(), clase);
             startActivity(i);
         }

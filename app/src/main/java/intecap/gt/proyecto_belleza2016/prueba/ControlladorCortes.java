@@ -15,7 +15,7 @@ public class ControlladorCortes {
 
     static {
         agregarItem(new Cortes(generarId(),
-                "Corte bob largo paso a paso", R.mipmap.cortedama, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
+                "Damas", R.drawable.cortedama, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
                 "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
                 "calidad especialmente diseñadas para cortar cabello. Puedes encontrarlas en línea o en las tiendas de suministros " +
                 "para salones de belleza. Usar tijeras de buena calidad hará que sea más fácil cortarte el cabello en casa.Debes" +
@@ -32,7 +32,7 @@ public class ControlladorCortes {
                 "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
                 "cabello separadas mientras cortas." ,"QC0zzrDt4uE"));
         agregarItem(new Cortes(generarId(),
-                "Corte de Pelo Corto para mujer paso a paso", R.mipmap.cortedama,  "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
+                "Caballeros", R.drawable.caballero,  "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
                 "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
                 "calidad especialmente diseñadas para cortar cabello. Puedes encontrarlas en línea o en las tiendas de suministros " +
                 "para salones de belleza. Usar tijeras de buena calidad hará que sea más fácil cortarte el cabello en casa.Debes" +
@@ -50,7 +50,7 @@ public class ControlladorCortes {
                 "cabello separadas mientras cortas."  ,"AV0RqHz1cac" +
                 ""));
         agregarItem(new Cortes(generarId(),
-                "tres", R.mipmap.cortedama, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
+                "Niñas", R.drawable.nina, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
                 "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
                 "calidad especialmente diseñadas para cortar cabello. Puedes encontrarlas en línea o en las tiendas de suministros " +
                 "para salones de belleza. Usar tijeras de buena calidad hará que sea más fácil cortarte el cabello en casa.Debes" +
@@ -67,7 +67,7 @@ public class ControlladorCortes {
                 "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
                 "cabello separadas mientras cortas."  ,"5coJa7lrRQw"));
         agregarItem(new Cortes(generarId(),
-                "cuatro", R.mipmap.cortedama, "" ,"5coJa7lrRQw"));
+                "Niños", R.drawable.peinado_ninos, "" ,"5coJa7lrRQw"));
     }
 
     private static void agregarItem(Cortes item) {

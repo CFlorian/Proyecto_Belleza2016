@@ -15,13 +15,13 @@ public class ControlladorCortes {
 
     static {
         agregarItem(new Cortes(generarId(),
-                "uno", R.mipmap.cortedama, "asdfad" ,"5coJa7lrRQw"));
+                "Damas", R.mipmap.cortedama, "asdfad" ,"5coJa7lrRQw"));
         agregarItem(new Cortes(generarId(),
-                "dos", R.mipmap.cortedama, "asdfasdf" ,"5coJa7lrRQw"));
+                "Caballeros", R.mipmap.caballero, "asdfasdf" ,"5coJa7lrRQw"));
         agregarItem(new Cortes(generarId(),
-                "tres", R.mipmap.cortedama, "asdfa" ,"5coJa7lrRQw"));
+                "Niñas", R.mipmap.nina, "asdfa" ,"5coJa7lrRQw"));
         agregarItem(new Cortes(generarId(),
-                "cuatro", R.mipmap.cortedama, "" ,"5coJa7lrRQw"));
+                "Niños", R.mipmap.corte_nino, "" ,"5coJa7lrRQw"));
     }
 
     private static void agregarItem(Cortes item) {

@@ -10,4 +10,6 @@
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
     tools:context="intecap.gt.proyecto_belleza2016.prueba.Presentacion"
-    tools:listitem="@layout/item_list_content" />
+    tools:listitem="@layout/item_list_content"
+
+/>

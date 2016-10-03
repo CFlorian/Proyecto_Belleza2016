@@ -35,7 +35,7 @@ public class DesarrolloFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.detalles_items, container, false);
 
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.nombre);
+            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.getDescripcion());
         }
 
         return rootView;

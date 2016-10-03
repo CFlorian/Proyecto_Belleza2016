@@ -62,12 +62,13 @@ public class DesarrolloActivity extends AppCompatActivity implements YouTubePlay
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-        if (VIDEO_ID!=null){
+        if (VIDEO_ID!= null){
             try {
-                youTubePlayer.loadVideo(item.url);
+                youTubePlayer.loadVideo(VIDEO_ID);
             }
             catch (Exception e){
                 e.printStackTrace();
+                Toast.makeText(this, "no funciono", Toast.LENGTH_LONG).show();
             }
         }
     }

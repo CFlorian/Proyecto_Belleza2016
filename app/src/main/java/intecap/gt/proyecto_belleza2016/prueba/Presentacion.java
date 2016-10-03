@@ -60,8 +60,8 @@ public class Presentacion extends Fragment {
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mItem = mValues.get(position);
-            holder.mIdView.setImageResource(mValues.get(position).foto);
-            holder.mContentView.setText(mValues.get(position).nombre);
+            holder.mIdView.setImageResource(mValues.get(position).getFoto());
+            holder.mContentView.setText(mValues.get(position).getNombre());
 
             holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override

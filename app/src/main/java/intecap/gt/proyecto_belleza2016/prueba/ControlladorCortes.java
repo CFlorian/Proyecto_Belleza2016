@@ -15,13 +15,13 @@ public class ControlladorCortes {
 
     static {
         agregarItem(new Cortes(generarId(),
-                "uno", R.mipmap.cortedama, "" ,"srAp9pzvRoE"));
+                "uno", R.mipmap.cortedama, "asdfad" ,"5coJa7lrRQw"));
         agregarItem(new Cortes(generarId(),
-                "dos", R.mipmap.cortedama, "" ,"PCiwDjzWaIk"));
+                "dos", R.mipmap.cortedama, "asdfasdf" ,"5coJa7lrRQw"));
         agregarItem(new Cortes(generarId(),
-                "tres", R.mipmap.cortedama, "" ,""));
+                "tres", R.mipmap.cortedama, "asdfa" ,"5coJa7lrRQw"));
         agregarItem(new Cortes(generarId(),
-                "cuatro", R.mipmap.cortedama, "" ,""));
+                "cuatro", R.mipmap.cortedama, "" ,"5coJa7lrRQw"));
     }
 
     private static void agregarItem(Cortes item) {
@@ -46,6 +46,26 @@ public class ControlladorCortes {
             this.foto = foto;
             this.descripcion = descripcion;
             this.url = url;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public int getFoto() {
+            return foto;
+        }
+
+        public String getDescripcion() {
+            return descripcion;
+        }
+
+        public String getUrl() {
+            return url;
         }
     }
 }

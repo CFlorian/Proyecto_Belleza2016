@@ -5,11 +5,7 @@
     android:id="@+id/item_list"
     android:name="intecap.gt.proyecto_belleza2016.prueba.ItemListFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+    android:layout_height="wrap_content"
     app:layoutManager="LinearLayoutManager"
     tools:context="intecap.gt.proyecto_belleza2016.prueba.Presentacion"
-    tools:listitem="@layout/item_list_content"
-
 />

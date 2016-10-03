@@ -20,11 +20,7 @@ import intecap.gt.proyecto_belleza2016.view.DragNDrop;
 import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
 public class Navigation_menu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private RecyclerView recycler, recycler2;
-    private RecyclerView.Adapter adapter, adapter2;
-    private RecyclerView.LayoutManager lManager, lManager2;
-    private GridLayoutManager glm, glm2;
-    private RecyclerView upRecyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,54 +44,6 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         fragmentManager.beginTransaction().replace(R.id.contenedor, fragment).commit();
         //presentacionMenu();
     }
-
-/*ate void presentacionMenu() {
-        List<PresentacionMenu> items = new ArrayList<>();//img / nombre
-        items.add(new PresentacionMenu(R.mipmap.cortedama, "Damas"));
-        items.add(new PresentacionMenu(R.mipmap.cortedama, "Caballero"));
-        items.add(new PresentacionMenu(R.mipmap.cortedama, "Niños"));
-        items.add(new PresentacionMenu(R.mipmap.cortedama, "Niñas"));
-
-        List<PresentacionMenu> item = new ArrayList<>();
-        item.add(new PresentacionMenu(R.mipmap.cortedama, "Damas"));
-        item.add(new PresentacionMenu(R.mipmap.cortedama, "Caballeros"));
-        item.add(new PresentacionMenu(R.mipmap.cortedama, "Niños"));
-        item.add(new PresentacionMenu(R.mipmap.cortedama, "Niñas"));
-
-
-       *//*
-       *  List<Peinados> item = new ArrayList<>();//img / nombre
-        item.add(new Peinados(R.mipmap.cortedama, ""));
-        item.add(new Peinados(R.mipmap.cortedama, ""));
-        item.add(new Peinados(R.mipmap.cortedama, ""));
-        item.add(new Peinados(R.mipmap.cortedama, ""));
-        *//*
-
-        glm = new GridLayoutManager(this, 2);
-        recycler = (RecyclerView) findViewById(R.id.reciclador);
-        recycler.setHasFixedSize(true);
-
-        lManager = new LinearLayoutManager(this);
-        recycler.setLayoutManager(glm);
-
-        adapter = new PresentacionAdapter(items);
-        recycler.setAdapter(adapter);
-
-
-
-        glm2 = new GridLayoutManager(this, 2);
-        recycler2 = (RecyclerView) findViewById(R.id.reciclador2);
-        recycler2.setHasFixedSize(true);
-
-        lManager2 = new LinearLayoutManager(this);
-        recycler2.setLayoutManager(glm2);
-
-        adapter2 = new PresentacionAdapter(item);
-        recycler2.setAdapter(adapter2);
-
-
-        //adapter = new PresentacionAdapter(item);
-    }*/
 
 
     @Override

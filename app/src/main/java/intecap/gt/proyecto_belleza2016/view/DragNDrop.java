@@ -1,6 +1,7 @@
 package intecap.gt.proyecto_belleza2016.view;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Point;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import intecap.gt.proyecto_belleza2016.R;
 
@@ -143,6 +146,19 @@ public class DragNDrop extends AppCompatActivity {
         else
             return 0;
     }
+
+    /**
+     * ----------------------------------------------------
+     */
+
+    private ArrayList getBundle(){
+        Bundle b = null;
+        Intent i = null;
+        return null;
+    }
+    /**
+     * ---------------------------------------------------
+     */
 
     @Override
     protected void onPause() {

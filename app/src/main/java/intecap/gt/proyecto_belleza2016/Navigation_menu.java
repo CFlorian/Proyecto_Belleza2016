@@ -86,14 +86,15 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         int id = item.getItemId();
         Class<?> clase = null;
 
-        if (id == R.id.nav_perfil)
-            clase = null;
-        else if (id == R.id.nav_info)
+        //if (id == R.id.nav_perfil)
+           // clase = null;
+        if (id == R.id.nav_info)
             clase = DragNDropTiposActivity.class;
         else if (id == R.id.nav_creditos)
             clase = DragNDrop.class;
-        else if (id == R.id.nav_herramientas)
-            clase = Video.class;
+        //else if (id == R.id.nav_herramientas)
+          // clase = Video.class;
+
         if (fragmentTransaction) {
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragment).commit();
         }

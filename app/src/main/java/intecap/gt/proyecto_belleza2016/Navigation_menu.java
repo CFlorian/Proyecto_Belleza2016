@@ -3,22 +3,19 @@ package intecap.gt.proyecto_belleza2016;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import intecap.gt.proyecto_belleza2016.adapter.PresentacionAdapter;
-import intecap.gt.proyecto_belleza2016.adapter.PresentacionMenu;
+import intecap.gt.proyecto_belleza2016.prueba.Presentacion;
 import intecap.gt.proyecto_belleza2016.view.DragNDrop;
 import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
@@ -27,7 +24,7 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
     private RecyclerView.Adapter adapter, adapter2;
     private RecyclerView.LayoutManager lManager, lManager2;
     private GridLayoutManager glm, glm2;
-
+    private RecyclerView upRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +42,14 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        presentacionMenu();
+        Fragment fragment;
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragment = new Presentacion();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, fragment).commit();
+        //presentacionMenu();
     }
 
-    private void presentacionMenu() {
+/*ate void presentacionMenu() {
         List<PresentacionMenu> items = new ArrayList<>();//img / nombre
         items.add(new PresentacionMenu(R.mipmap.cortedama, "Damas"));
         items.add(new PresentacionMenu(R.mipmap.cortedama, "Caballero"));
@@ -62,13 +63,13 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         item.add(new PresentacionMenu(R.mipmap.cortedama, "Niñas"));
 
 
-       /*
+       *//*
        *  List<Peinados> item = new ArrayList<>();//img / nombre
         item.add(new Peinados(R.mipmap.cortedama, ""));
         item.add(new Peinados(R.mipmap.cortedama, ""));
         item.add(new Peinados(R.mipmap.cortedama, ""));
         item.add(new Peinados(R.mipmap.cortedama, ""));
-        */
+        *//*
 
         glm = new GridLayoutManager(this, 2);
         recycler = (RecyclerView) findViewById(R.id.reciclador);
@@ -94,7 +95,7 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
 
 
         //adapter = new PresentacionAdapter(item);
-    }
+    }*/
 
 
     @Override
@@ -132,6 +133,8 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        boolean fragmentTransaction = false;
+        Fragment fragment = null;
         int id = item.getItemId();
         Class<?> clase = null;
 
@@ -143,7 +146,9 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
             clase = DragNDrop.class;
         else if (id == R.id.nav_herramientas)
             clase = Video.class;
-
+        if (fragmentTransaction) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragment).commit();
+        }
 
         if (clase != null) {
             Intent i = new Intent(getBaseContext(), clase);
@@ -154,4 +159,5 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

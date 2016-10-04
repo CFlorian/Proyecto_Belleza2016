@@ -12,77 +12,18 @@ public class ControlladorCortes {
 
     public static final List<Cortes> ITEMS = new ArrayList<>();
     public static final Map<String, Cortes> ITEM_MAP = new HashMap<>();
+    public static final int Cortedama = R.string.corte_dama;
 
     static {
         agregarItem(new Cortes(generarId(),
-                "Damas", R.drawable.cortedama, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
-                "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
-                "calidad especialmente diseñadas para cortar cabello. Puedes encontrarlas en línea o en las tiendas de suministros " +
-                "para salones de belleza. Usar tijeras de buena calidad hará que sea más fácil cortarte el cabello en casa.Debes" +
-                " buscar tijeras de peluquero que tengan una cuchilla de acero inoxidable y una cuchilla afilada. No utilices " +
-                "tijeras de cocina, tijeras para uso doméstico o tijeras de jardinería, ya que podrían arrancarte o dañarte el " +
-                "cabello." +
-                "2 Compra una maquinilla para cortar cabello y una rasuradora para cabello. Puedes encontrarlas en línea o en una " +
-                "tienda de suministros para salones de belleza. Consigue maquinillas eléctricas de buena calidad, ya que vas a usar " +
-                "estas herramientas para hacer el corte bob.Una rasuradora para cabello también será útil para hacer este corte, ya " +
-                "que te permitirá dar forma y recortar el cabello sin tener que hacer ningún corte mayor. Asegúrate de que la " +
-                "rasuradora esté afilada, puesto que una cuchilla sin filo hará que sea más difícil de usar." +
-                "3 Consigue un peine y bandas elásticas para cabello. También necesitarás un peine y tres bandas elásticas. Puedes " +
-                "encontrar estos productos en línea o en el pasillo de artículos de belleza de cualquier farmacia local. El peine " +
-                "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
-                "cabello separadas mientras cortas." ,"QC0zzrDt4uE",1));
+                "Damas", R.drawable.cortedama, Cortedama ,"QC0zzrDt4uE",1));
         agregarItem(new Cortes(generarId(),
-                "Caballeros", R.drawable.caballero,  "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
-                "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
-                "calidad especialmente diseñadas para cortar cabello. Puedes encontrarlas en línea o en las tiendas de suministros " +
-                "para salones de belleza. Usar tijeras de buena calidad hará que sea más fácil cortarte el cabello en casa.Debes" +
-                " buscar tijeras de peluquero que tengan una cuchilla de acero inoxidable y una cuchilla afilada. No utilices " +
-                "tijeras de cocina, tijeras para uso doméstico o tijeras de jardinería, ya que podrían arrancarte o dañarte el " +
-                "cabello." +
-                "2 Compra una maquinilla para cortar cabello y una rasuradora para cabello. Puedes encontrarlas en línea o en una " +
-                "tienda de suministros para salones de belleza. Consigue maquinillas eléctricas de buena calidad, ya que vas a usar " +
-                "estas herramientas para hacer el corte bob.Una rasuradora para cabello también será útil para hacer este corte, ya " +
-                "que te permitirá dar forma y recortar el cabello sin tener que hacer ningún corte mayor. Asegúrate de que la " +
-                "rasuradora esté afilada, puesto que una cuchilla sin filo hará que sea más difícil de usar." +
-                "3 Consigue un peine y bandas elásticas para cabello. También necesitarás un peine y tres bandas elásticas. Puedes " +
-                "encontrar estos productos en línea o en el pasillo de artículos de belleza de cualquier farmacia local. El peine " +
-                "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
-                "cabello separadas mientras cortas."  ,"AV0RqHz1cac" +
+                "Caballeros", R.drawable.caballero,Cortedama,"AV0RqHz1cac" +
                 "",2));
         agregarItem(new Cortes(generarId(),
-                "Niñas", R.drawable.nina, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
-                "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
-                "calidad especialmente diseñadas para cortar cabello. Puedes encontrarlas en línea o en las tiendas de suministros " +
-                "para salones de belleza. Usar tijeras de buena calidad hará que sea más fácil cortarte el cabello en casa.Debes" +
-                " buscar tijeras de peluquero que tengan una cuchilla de acero inoxidable y una cuchilla afilada. No utilices " +
-                "tijeras de cocina, tijeras para uso doméstico o tijeras de jardinería, ya que podrían arrancarte o dañarte el " +
-                "cabello." +
-                "2 Compra una maquinilla para cortar cabello y una rasuradora para cabello. Puedes encontrarlas en línea o en una " +
-                "tienda de suministros para salones de belleza. Consigue maquinillas eléctricas de buena calidad, ya que vas a usar " +
-                "estas herramientas para hacer el corte bob.Una rasuradora para cabello también será útil para hacer este corte, ya " +
-                "que te permitirá dar forma y recortar el cabello sin tener que hacer ningún corte mayor. Asegúrate de que la " +
-                "rasuradora esté afilada, puesto que una cuchilla sin filo hará que sea más difícil de usar." +
-                "3 Consigue un peine y bandas elásticas para cabello. También necesitarás un peine y tres bandas elásticas. Puedes " +
-                "encontrar estos productos en línea o en el pasillo de artículos de belleza de cualquier farmacia local. El peine " +
-                "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
-                "cabello separadas mientras cortas."  ,"5coJa7lrRQw",3));
+                "Niñas", R.drawable.nina, Cortedama,"5coJa7lrRQw",3));
         agregarItem(new Cortes(generarId(),
-                "Niños", R.drawable.peinado_ninos, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
-                "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
-                "calidad especialmente diseñadas para cortar cabello. Puedes encontrarlas en línea o en las tiendas de suministros " +
-                "para salones de belleza. Usar tijeras de buena calidad hará que sea más fácil cortarte el cabello en casa.Debes" +
-                " buscar tijeras de peluquero que tengan una cuchilla de acero inoxidable y una cuchilla afilada. No utilices " +
-                "tijeras de cocina, tijeras para uso doméstico o tijeras de jardinería, ya que podrían arrancarte o dañarte el " +
-                "cabello." +
-                "2 Compra una maquinilla para cortar cabello y una rasuradora para cabello. Puedes encontrarlas en línea o en una " +
-                "tienda de suministros para salones de belleza. Consigue maquinillas eléctricas de buena calidad, ya que vas a usar " +
-                "estas herramientas para hacer el corte bob.Una rasuradora para cabello también será útil para hacer este corte, ya " +
-                "que te permitirá dar forma y recortar el cabello sin tener que hacer ningún corte mayor. Asegúrate de que la " +
-                "rasuradora esté afilada, puesto que una cuchilla sin filo hará que sea más difícil de usar." +
-                "3 Consigue un peine y bandas elásticas para cabello. También necesitarás un peine y tres bandas elásticas. Puedes " +
-                "encontrar estos productos en línea o en el pasillo de artículos de belleza de cualquier farmacia local. El peine " +
-                "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
-                "cabello separadas mientras cortas."  ,"5coJa7lrRQw",4));
+                "Niños", R.drawable.peinado_ninos, Cortedama ,"5coJa7lrRQw",4));
     }
 
     private static void agregarItem(Cortes item) {
@@ -98,11 +39,11 @@ public class ControlladorCortes {
         public final String id;
         public final String nombre;
         public final int foto;
-        public final String descripcion;
+        public final int descripcion;
         public final String url;
         public int id2;
 
-        public Cortes(String id, String nombre, int foto, String descripcion, String url, int id2) {
+        public Cortes(String id, String nombre, int foto, int descripcion, String url, int id2) {
             this.id = id;
             this.nombre = nombre;
             this.foto = foto;
@@ -124,7 +65,7 @@ public class ControlladorCortes {
             return foto;
         }
 
-        public String getDescripcion() {
+        public int getDescripcion() {
             return descripcion;
         }
 

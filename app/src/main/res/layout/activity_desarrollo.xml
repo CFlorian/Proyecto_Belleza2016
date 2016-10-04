@@ -23,22 +23,16 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
-
-        <fragment
+     <fragment
             android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
             android:id="@+id/youtube_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-    </android.support.v4.widget.NestedScrollView>
-
+<!--
     <Button
         android:text="Autoevaluacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:id="@+id/btnAuto" />
+        android:id="@+id/btnAuto" /> -->
 </LinearLayout>

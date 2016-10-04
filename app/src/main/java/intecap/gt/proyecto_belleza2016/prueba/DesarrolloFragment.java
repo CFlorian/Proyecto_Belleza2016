@@ -1,13 +1,19 @@
 package intecap.gt.proyecto_belleza2016.prueba;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.youtube.player.YouTubePlayerFragment;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+
 import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.view.DragNDrop;
 
 public class DesarrolloFragment extends Fragment {
 
@@ -35,9 +41,22 @@ public class DesarrolloFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.detalles_items, container, false);
 
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.getDescripcion());
+            ((TextView) rootView.findViewById(R.id.tvDescripcion)).setText(mItem.getDescripcion());
         }
 
+        onInit(rootView);
         return rootView;
+    }
+
+    private void onInit(View rootView) {
+        FloatingActionButton fabAuto = (FloatingActionButton) rootView.findViewById(R.id.btnAuto);
+        fabAuto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity().getBaseContext(), DragNDrop.class);
+                startActivity(i);
+
+            }
+        });
     }
 }

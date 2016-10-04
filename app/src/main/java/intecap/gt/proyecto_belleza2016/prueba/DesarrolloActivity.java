@@ -61,6 +61,7 @@ public class DesarrolloActivity extends AppCompatActivity implements YouTubePlay
                     .add(R.id.item_detail_container, fragment)
                     .commit();
 
+/*
             btnAuto = (Button) findViewById(R.id.btnAuto);
             btnAuto.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -71,6 +72,7 @@ public class DesarrolloActivity extends AppCompatActivity implements YouTubePlay
 
                 }
             });
+*/
 
         }
 

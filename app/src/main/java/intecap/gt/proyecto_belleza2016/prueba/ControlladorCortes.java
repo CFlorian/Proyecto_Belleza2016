@@ -13,17 +13,19 @@ public class ControlladorCortes {
     public static final List<Cortes> ITEMS = new ArrayList<>();
     public static final Map<String, Cortes> ITEM_MAP = new HashMap<>();
     public static final int Cortedama = R.string.corte_dama;
+    public static final int Cortecaballero = R.string.corte_caballero;
+    public static final int Corteniño = R.string.corte_niño;
+    public static final int Corteniña = R.string.corte_niña;
 
     static {
         agregarItem(new Cortes(generarId(),
                 "Damas", R.drawable.cortedama, Cortedama ,"QC0zzrDt4uE",1));
         agregarItem(new Cortes(generarId(),
-                "Caballeros", R.drawable.caballero,Cortedama,"AV0RqHz1cac" +
-                "",2));
+                "Caballeros", R.drawable.caballero,Cortecaballero,"PCiwDjzWaIk",2));
         agregarItem(new Cortes(generarId(),
-                "Niñas", R.drawable.nina, Cortedama,"5coJa7lrRQw",3));
+                "Niñas", R.drawable.nina, Corteniña,"oBJ2LpQ9rwY",3));
         agregarItem(new Cortes(generarId(),
-                "Niños", R.drawable.peinado_ninos, Cortedama ,"5coJa7lrRQw",4));
+                "Niños", R.drawable.peinado_ninos, Corteniño,"vY9Jud39XwU",4));
     }
 
     private static void agregarItem(Cortes item) {

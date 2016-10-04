@@ -13,6 +13,8 @@ import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 
 import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.utilidades.Alert;
+import intecap.gt.proyecto_belleza2016.utilidades.OnAction;
 import intecap.gt.proyecto_belleza2016.view.DragNDrop;
 
 public class DesarrolloFragment extends Fragment {
@@ -53,8 +55,8 @@ public class DesarrolloFragment extends Fragment {
         fabAuto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity().getBaseContext(), DragNDrop.class);
-                startActivity(i);
+               Intent i = new Intent(getActivity().getBaseContext(), DragNDrop.class);
+               startActivity(i);
 
             }
         });

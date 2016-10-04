@@ -37,7 +37,6 @@ public class DragNDropTiposActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
         initText();
-
     }
 
     private void initText(){

@@ -38,11 +38,11 @@ public class Splash extends Activity{
                 } finally {
 
                     if(registrado == null){
-                        Intent registro= new Intent(Splash.this, Navigation_menu.class);
+                        Intent registro= new Intent(Splash.this, Registro.class);
                         startActivity(registro);
 
                     }else {
-                        Intent login = new Intent(Splash.this, Login.class);
+                        Intent login = new Intent(Splash.this, Navigation_menu.class);
                         startActivity(login);
                     }
 

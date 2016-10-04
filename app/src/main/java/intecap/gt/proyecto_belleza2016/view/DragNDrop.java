@@ -24,6 +24,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.utilidades.Alert;
+import intecap.gt.proyecto_belleza2016.utilidades.OnAction;
 import intecap.gt.proyecto_belleza2016.utilidades.Parametros;
 
 public class DragNDrop extends AppCompatActivity {
@@ -38,12 +40,30 @@ public class DragNDrop extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag_ndrop_tipos);
+        alerta();
         tiempoEspera();
         onInit();
+    }
+
+    private void alerta(){
+        String cuerpo = "En el siguiente test manten y arrastra la respuesta hacia la imagen.";
+        Alert.alert(this, "Test de tipos de material", cuerpo, new OnAction() {
+            @Override
+            public void onAction() {
+                printTraceStace();
+            }
+
+            private void printTraceStace(){
+                System.err.println("NULL REFERENCE OBJTEC EXCEPTION");
+            }
+        });
+
+
 
     }
 
     private void onInit() {
+
         descripcion = (TextView) findViewById(R.id.tvDescrip);
         imagen = (ImageView) findViewById(R.id.ivImagen);
         respuesta1 = (TextView) findViewById(R.id.tvRes1);
@@ -82,7 +102,7 @@ public class DragNDrop extends AppCompatActivity {
 
         }catch (Exception e){
             System.err.println(e.getMessage());
-            System.err.println("Se genero un problema al querer cargar el dato correspondiente al parecer no se encuentra.");
+            e.printStackTrace();
         }
         return tema;
     }
@@ -134,8 +154,8 @@ public class DragNDrop extends AppCompatActivity {
         @Override
         public void onProvideShadowMetrics(Point shadowSize, Point shadowTouchPoint) {
             View v = getView();
-            int alto = (int) v.getHeight() / 2;
-            int ancho = (int) v.getWidth() / 2;
+            int alto = (int) v.getHeight() ;
+            int ancho = (int) v.getWidth() ;
 
             greyBox.setBounds(0, 0, ancho, alto);
 
@@ -184,6 +204,7 @@ public class DragNDrop extends AppCompatActivity {
         }else if (falsos) {
             Toast.makeText(getApplicationContext(), "Incorrecto Intentalo nuevamente", Toast.LENGTH_SHORT).show();
             valor += getAction(false);
+
         }
 
         System.out.println(valor);
@@ -211,9 +232,11 @@ public class DragNDrop extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent i = new Intent(getBaseContext(), DragNDropTiposActivity.class);
                         startActivity(i);
+                        //finish();
                         terminado = true;
                     }
                 });
+
         AlertDialog alert = dialog.create();
         dialog.show();
     }
@@ -229,9 +252,6 @@ public class DragNDrop extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         if(terminado){
-            System.err.println(terminado);
-            System.out.println();
-            System.err.println("finish()");
             finish();
         }
     }

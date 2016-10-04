@@ -17,6 +17,7 @@ import android.view.MenuItem;
 
 import intecap.gt.proyecto_belleza2016.prueba.Presentacion;
 import intecap.gt.proyecto_belleza2016.view.BibliografiaActivity;
+import intecap.gt.proyecto_belleza2016.view.Creditos;
 import intecap.gt.proyecto_belleza2016.view.DragNDrop;
 import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
@@ -92,7 +93,7 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         if (id == R.id.nav_info)
             clase = BibliografiaActivity.class;
         else if (id == R.id.nav_creditos)
-            clase = DragNDrop.class;
+            clase = Creditos.class;
         //else if (id == R.id.nav_herramientas)
           // clase = Video.class;
 

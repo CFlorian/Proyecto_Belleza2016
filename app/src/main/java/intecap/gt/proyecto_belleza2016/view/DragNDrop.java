@@ -1,12 +1,15 @@
 package intecap.gt.proyecto_belleza2016.view;
 
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.DragEvent;
@@ -18,6 +21,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.utilidades.Parametros;
 
 public class DragNDrop extends AppCompatActivity {
 
@@ -34,6 +38,8 @@ public class DragNDrop extends AppCompatActivity {
                     "Peinado ondulado",
                     "Peinado estilo hombre"}
     };
+
+    private SharedPreferences sp;
 
     private int IMGS[] = {R.mipmap.p1, R.mipmap.ic_launcher};
 
@@ -56,10 +62,23 @@ public class DragNDrop extends AppCompatActivity {
         imagen.setImageResource(IMGS[count]);
         respuesta1.setText(TEXTOS[count][2]);
         respuesta2.setText(TEXTOS[count][3]);
+        recuperaPreferencias();
 
         findViewById(R.id.tvRes1).setOnLongClickListener(longListener);
         findViewById(R.id.tvRes2).setOnLongClickListener(longListener);
         findViewById(R.id.tvTarget).setOnDragListener(dropListener);
+    }
+
+    private void recuperaPreferencias(){
+        try{
+
+           sp = getSharedPreferences(Parametros.VALOR, Context.MODE_PRIVATE);
+            int tema = sp.getInt(Parametros.VALOR, 1);
+
+        }catch (Exception e){
+            System.err.println(e.getMessage());
+            System.err.println("Se genero un problema al querer cargar el dato correspondiente al parecer no se encuentra.");
+        }
     }
 
     View.OnLongClickListener longListener = new View.OnLongClickListener() {
@@ -131,9 +150,9 @@ public class DragNDrop extends AppCompatActivity {
         if((count + 1) < IMGS.length){
             count ++;
             onInit();
-        }else{/*
-            Intent i = new Intent(getBaseContext(), Presentacion.class);
-            startActivity(i);*/
+        }else{
+            Intent i = new Intent(getBaseContext(), DragNDropTiposActivity.class);
+            startActivity(i);
         }
 
     }

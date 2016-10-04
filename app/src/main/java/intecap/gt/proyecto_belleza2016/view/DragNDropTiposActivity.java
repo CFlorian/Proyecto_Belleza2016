@@ -1,6 +1,8 @@
 package intecap.gt.proyecto_belleza2016.view;
 
 import android.content.ClipData;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Point;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.utilidades.Parametros;
 
 public class DragNDropTiposActivity extends AppCompatActivity {
 
@@ -49,6 +52,13 @@ public class DragNDropTiposActivity extends AppCompatActivity {
         findViewById(R.id.tvRes1).setOnLongClickListener(longListener);
         findViewById(R.id.tvRes2).setOnLongClickListener(longListener);
         findViewById(R.id.tvTarget).setOnDragListener(dropListener);
+        recuperaPreferencia();
+    }
+
+    private void recuperaPreferencia(){
+        SharedPreferences sp = getSharedPreferences(Parametros.VALOR, Context.MODE_PRIVATE);
+        int tema = sp.getInt(Parametros.VALOR, 1);
+        System.err.println(tema + " CRISTIAN");
     }
 
     View.OnLongClickListener longListener = new View.OnLongClickListener() {

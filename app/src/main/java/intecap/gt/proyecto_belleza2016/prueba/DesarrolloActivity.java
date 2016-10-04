@@ -52,25 +52,23 @@ public class DesarrolloActivity extends AppCompatActivity implements YouTubePlay
                     getIntent().getStringExtra(DesarrolloFragment.ARG_ITEM_ID));
             sp = getSharedPreferences(Parametros.VALOR, Context.MODE_PRIVATE);
             final int posicion = sp.getInt(Parametros.VALOR,1);
-           // Bundle posicion = new Bundle();
-            //posicion.getInt(KEY);
+
             Log.i("Prueba3","La posicion en activity es "    + posicion);
+
             DesarrolloFragment fragment = new DesarrolloFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)
                     .commit();
+
             btnAuto = (Button) findViewById(R.id.btnAuto);
             btnAuto.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (posicion == 1){
-                        Intent intento = new Intent(DesarrolloActivity.this, DragNDrop.class);
-                        startActivity(intento);
-                    } else if (posicion == 2){
-                        Intent intento = new Intent(DesarrolloActivity.this, DragNDropTiposActivity.class);
-                        startActivity(intento);
-                    }
+
+                    Intent i = new Intent(getBaseContext(), DragNDrop.class);
+                    startActivity(i);
+
                 }
             });
 

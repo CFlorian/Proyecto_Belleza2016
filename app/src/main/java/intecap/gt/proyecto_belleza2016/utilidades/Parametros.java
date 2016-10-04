@@ -6,4 +6,7 @@ package intecap.gt.proyecto_belleza2016.utilidades;
 
 public class Parametros {
     public static final String VALOR= "valor";
+    public static final class Const{
+        public static final String KEY_BUNDLE = "GET_THEME";
+    }
 }

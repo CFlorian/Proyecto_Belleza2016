@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="test1">
+		<item>¿Dondé se puede encontrar tijeras de buena calidad?</item>
+		<item>Centro Comercial</item>
+		<item>Tienda de suministros</item>
+	</string-array>
+	
+	<string-array name="test2">
+		<item>¿Que tijeras debes usar para cortar el cabello?</item>
+		<item>Largas</item>
+		<item>Inoxidables</item>
+	</string-array>
+
+	<string-array name="test3">
+		<item>¿Para dar forma al cabello que debes usar?</item>
+		<item>Cuchilla</item>
+		<item>Maquina</item>
+	</string-array>
+
+	<string-array name="test4">
+		<item>¿Cuantas bandas elasticas necesitas?</item>
+		<item>Tres</item>
+		<item>Cuatro</item>
+	</string-array>
+
+</resources>

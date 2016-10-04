@@ -9,8 +9,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,8 +16,6 @@ import android.view.MenuItem;
 import intecap.gt.proyecto_belleza2016.prueba.Presentacion;
 import intecap.gt.proyecto_belleza2016.view.BibliografiaActivity;
 import intecap.gt.proyecto_belleza2016.view.Creditos;
-import intecap.gt.proyecto_belleza2016.view.DragNDrop;
-import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
 public class Navigation_menu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -61,7 +57,7 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation_menu, menu);
+        //getMenuInflater().inflate(R.menu.navigation_menu, menu);
         return true;
     }
 

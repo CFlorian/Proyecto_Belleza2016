@@ -4,10 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,6 @@ import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 import intecap.gt.proyecto_belleza2016.R;
 import intecap.gt.proyecto_belleza2016.utilidades.Parametros;
 import intecap.gt.proyecto_belleza2016.view.DragNDrop;
-import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
 public class DesarrolloActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
 
@@ -108,4 +108,5 @@ public class DesarrolloActivity extends AppCompatActivity implements YouTubePlay
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
         Toast.makeText(this, "no funciono", Toast.LENGTH_LONG).show();
     }
+
 }

@@ -33,6 +33,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="intecap.gt.proyecto_belleza2016.prueba.Presentacion" />
         </activity>
+        <activity android:name=".view.BibliografiaActivity"></activity>
     </application>
 
 </manifest>

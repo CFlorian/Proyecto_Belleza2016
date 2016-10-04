@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/_4sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info"
+            android:textSize="@dimen/_13sdp"/>
+    </LinearLayout>
+
+    <TextView
+        android:paddingLeft="@dimen/_4sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/informacion_de_tema_1"
+        android:id="@+id/tvTema1"
+        android:textSize="@dimen/_13sdp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnOpen1"
+            android:text="link"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:paddingLeft="@dimen/_4sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/informacion_de_tema_2"
+            android:id="@+id/tvTema2"
+            android:textSize="@dimen/_13sdp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnOpen2"
+            android:text="link"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:paddingLeft="@dimen/_4sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/informacion_de_tema_3"
+        android:id="@+id/tvTema3"
+        android:textSize="@dimen/_13sdp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/btnOpen3"
+        android:text="link"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"/>
+
+   <TextView
+       android:paddingLeft="@dimen/_4sdp"
+       android:paddingTop="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/informacion_de_tema_4"
+        android:id="@+id/tvTema4"
+       android:textSize="@dimen/_13sdp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/btnOpen4"
+        android:text="link"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

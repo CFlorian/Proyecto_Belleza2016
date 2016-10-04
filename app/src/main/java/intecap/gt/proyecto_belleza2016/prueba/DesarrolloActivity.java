@@ -1,11 +1,16 @@
 package intecap.gt.proyecto_belleza2016.prueba;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -13,6 +18,9 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 
 import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.utilidades.Parametros;
+import intecap.gt.proyecto_belleza2016.view.DragNDrop;
+import intecap.gt.proyecto_belleza2016.view.DragNDropTiposActivity;
 
 public class DesarrolloActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
 
@@ -20,6 +28,9 @@ public class DesarrolloActivity extends AppCompatActivity implements YouTubePlay
     private YouTubePlayerSupportFragment frag;
     private static final String API_YOUTUBE = "AIzaSyCcoUT7cpFxWK4zquIJF_iFMN_Wxs9q3Og";
     private static final String VIDEO_ID = "PCiwDjzWaIk";
+    private String KEY = "llave";
+    private Button btnAuto;
+    private SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +38,7 @@ public class DesarrolloActivity extends AppCompatActivity implements YouTubePlay
         setContentView(R.layout.activity_desarrollo);
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
+
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();
@@ -38,11 +50,30 @@ public class DesarrolloActivity extends AppCompatActivity implements YouTubePlay
             Bundle arguments = new Bundle();
             arguments.putString(DesarrolloFragment.ARG_ITEM_ID,
                     getIntent().getStringExtra(DesarrolloFragment.ARG_ITEM_ID));
+            sp = getSharedPreferences(Parametros.VALOR, Context.MODE_PRIVATE);
+            final int posicion = sp.getInt(Parametros.VALOR,1);
+           // Bundle posicion = new Bundle();
+            //posicion.getInt(KEY);
+            Log.i("Prueba3","La posicion en activity es "    + posicion);
             DesarrolloFragment fragment = new DesarrolloFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)
                     .commit();
+            btnAuto = (Button) findViewById(R.id.btnAuto);
+            btnAuto.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (posicion == 1){
+                        Intent intento = new Intent(DesarrolloActivity.this, DragNDrop.class);
+                        startActivity(intento);
+                    } else if (posicion == 2){
+                        Intent intento = new Intent(DesarrolloActivity.this, DragNDropTiposActivity.class);
+                        startActivity(intento);
+                    }
+                }
+            });
+
         }
 
         frag = (YouTubePlayerSupportFragment) getSupportFragmentManager().findFragmentById(R.id.youtube_fragment);

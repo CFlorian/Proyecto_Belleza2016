@@ -30,7 +30,7 @@ public class ControlladorCortes {
                 "3 Consigue un peine y bandas elásticas para cabello. También necesitarás un peine y tres bandas elásticas. Puedes " +
                 "encontrar estos productos en línea o en el pasillo de artículos de belleza de cualquier farmacia local. El peine " +
                 "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
-                "cabello separadas mientras cortas." ,"QC0zzrDt4uE"));
+                "cabello separadas mientras cortas." ,"QC0zzrDt4uE",1));
         agregarItem(new Cortes(generarId(),
                 "Caballeros", R.drawable.caballero,  "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
                 "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
@@ -48,7 +48,7 @@ public class ControlladorCortes {
                 "encontrar estos productos en línea o en el pasillo de artículos de belleza de cualquier farmacia local. El peine " +
                 "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
                 "cabello separadas mientras cortas."  ,"AV0RqHz1cac" +
-                ""));
+                "",2));
         agregarItem(new Cortes(generarId(),
                 "Niñas", R.drawable.nina, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
                 "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
@@ -65,7 +65,7 @@ public class ControlladorCortes {
                 "3 Consigue un peine y bandas elásticas para cabello. También necesitarás un peine y tres bandas elásticas. Puedes " +
                 "encontrar estos productos en línea o en el pasillo de artículos de belleza de cualquier farmacia local. El peine " +
                 "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
-                "cabello separadas mientras cortas."  ,"5coJa7lrRQw"));
+                "cabello separadas mientras cortas."  ,"5coJa7lrRQw",3));
         agregarItem(new Cortes(generarId(),
                 "Niños", R.drawable.peinado_ninos, "Primero debemos reunir los materiales adecuados: 1 Consigue un " +
                 "buen par de tijeras de peluquero. Si decides cortarte el cabello por tu cuenta, debes buscar tijeras de buena " +
@@ -82,7 +82,7 @@ public class ControlladorCortes {
                 "3 Consigue un peine y bandas elásticas para cabello. También necesitarás un peine y tres bandas elásticas. Puedes " +
                 "encontrar estos productos en línea o en el pasillo de artículos de belleza de cualquier farmacia local. El peine " +
                 "te ayudará a separar el cabello en secciones iguales para hacer el corte. Las bandas mantendrán las secciones de " +
-                "cabello separadas mientras cortas."  ,"5coJa7lrRQw"));
+                "cabello separadas mientras cortas."  ,"5coJa7lrRQw",4));
     }
 
     private static void agregarItem(Cortes item) {
@@ -100,13 +100,16 @@ public class ControlladorCortes {
         public final int foto;
         public final String descripcion;
         public final String url;
+        public int id2;
 
-        public Cortes(String id, String nombre, int foto, String descripcion, String url) {
+        public Cortes(String id, String nombre, int foto, String descripcion, String url, int id2) {
             this.id = id;
             this.nombre = nombre;
             this.foto = foto;
             this.descripcion = descripcion;
             this.url = url;
+            this.id2 = id2;
+
         }
 
         public String getId() {
@@ -128,5 +131,7 @@ public class ControlladorCortes {
         public String getUrl() {
             return url;
         }
+
+        public int getId2(){ return id2;}
     }
 }

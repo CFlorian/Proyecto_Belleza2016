@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Window;
 
+import intecap.gt.proyecto_belleza2016.Navigation_menu;
 import intecap.gt.proyecto_belleza2016.R;
 
 
@@ -37,7 +38,7 @@ public class Splash extends Activity{
                 } finally {
 
                     if(registrado == null){
-                        Intent registro= new Intent(Splash.this, Registro.class);
+                        Intent registro= new Intent(Splash.this, Navigation_menu.class);
                         startActivity(registro);
 
                     }else {

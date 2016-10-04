@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cvPosicion"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
         card_view:cardCornerRadius="6dp"

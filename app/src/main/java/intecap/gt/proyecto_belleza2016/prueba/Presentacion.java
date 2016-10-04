@@ -2,27 +2,34 @@ package intecap.gt.proyecto_belleza2016.prueba;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.utilidades.Parametros;
 
 
 public class Presentacion extends Fragment {
     private boolean mTwoPane;
     private GridLayoutManager gManager;
     private RecyclerView recyclerView;
+    private String KEY = "llave";
+
 
     @Nullable
     @Override
@@ -58,18 +65,26 @@ public class Presentacion extends Fragment {
         }
 
         @Override
-        public void onBindViewHolder(final ViewHolder holder, int position) {
+        public void onBindViewHolder(final ViewHolder holder, final int position) {
             holder.mItem = mValues.get(position);
             holder.mIdView.setImageResource(mValues.get(position).getFoto());
             holder.mContentView.setText(mValues.get(position).getNombre());
-
+            Log.i("Prueba","La posicion es " + position);
             holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
+                    int pos2 = holder.mItem.getId2();
                     Intent intent = new Intent(context, DesarrolloActivity.class);
                     intent.putExtra(DesarrolloFragment.ARG_ITEM_ID, holder.mItem.id);
-
+                    SharedPreferences sp;
+                    sp =  getActivity().getSharedPreferences(Parametros.VALOR, Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putInt(Parametros.VALOR,pos2);
+                    editor.commit();
+                    Log.i("Prueba","La posicion es " + holder.mItem.id);
+                    Log.i("Prueba2","La posicion es " + holder.mItem.id2);
+                    Log.i("Prueba3","La posicion es " + pos2);
                     context.startActivity(intent);
                 }
             });
@@ -85,12 +100,15 @@ public class Presentacion extends Fragment {
             public final ImageView mIdView;
             public final TextView mContentView;
             public ControlladorCortes.Cortes mItem;
+            public int Position2;
+            public CardView cvPosicion;
 
             public ViewHolder(View view) {
                 super(view);
                 mView = view;
                 mIdView = (ImageView) view.findViewById(R.id.id);
                 mContentView = (TextView) view.findViewById(R.id.content);
+                cvPosicion = (CardView) view.findViewById(R.id.cvPosicion);
             }
         }
     }

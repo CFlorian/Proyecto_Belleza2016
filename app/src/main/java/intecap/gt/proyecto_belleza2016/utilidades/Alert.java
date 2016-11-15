@@ -6,9 +6,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 
-/**
- * Created by programadormd on 10-04-16.
- */
 
 public class Alert {
 

@@ -57,9 +57,6 @@ public class DragNDrop extends AppCompatActivity {
                 System.err.println("NULL REFERENCE OBJTEC EXCEPTION");
             }
         });
-
-
-
     }
 
     private void onInit() {
@@ -236,7 +233,6 @@ public class DragNDrop extends AppCompatActivity {
                         terminado = true;
                     }
                 });
-
         AlertDialog alert = dialog.create();
         dialog.show();
     }

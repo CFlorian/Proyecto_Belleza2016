@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 import intecap.gt.proyecto_belleza2016.Navigation_menu;
 import intecap.gt.proyecto_belleza2016.R;
+import intecap.gt.proyecto_belleza2016.utilidades.Alert;
+import intecap.gt.proyecto_belleza2016.utilidades.OnAction;
 import intecap.gt.proyecto_belleza2016.utilidades.Parametros;
 
 public class DragNDropTiposActivity extends AppCompatActivity {
@@ -34,9 +36,24 @@ public class DragNDropTiposActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag_ndrop_tipos);
+        mensaje();
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
         initText();
+    }
+
+    private void mensaje(){
+        String cuerpo = "En el siguiente test manten y arrastra la respuesta hacia la imagen.";
+        Alert.alert(this, "Test de tipos de material", cuerpo, new OnAction() {
+            @Override
+            public void onAction() {
+                printTraceStace();
+            }
+
+            private void printTraceStace(){
+                System.err.println("NULL REFERENCE OBJTEC EXCEPTION");
+            }
+        });
     }
 
     private void initText(){

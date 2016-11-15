@@ -26,9 +26,10 @@
 
                 <TextView
                     android:id="@+id/tvDescripcion"
+                    android:textSize="@dimen/_9sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"/>
+                    android:padding="@dimen/_10sdp"/>
             </android.support.v7.widget.CardView>
 
             <android.support.design.widget.FloatingActionButton
